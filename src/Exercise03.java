@@ -18,6 +18,7 @@ public class Exercise03 {
 		int count;
 		System.out.println("人数を入力：");
 		count = new java.util.Scanner(System.in).nextInt();
+		//入力された値が２以上か確認
 		if(count < 2) {
 			System.out.println("人数は２以上の整数を入力してください");
 			System.exit(0);
