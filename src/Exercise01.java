@@ -37,8 +37,8 @@ public class Exercise01 {
 	//じゃんけんの勝ち負け処理 (１：グー２：チョキ３：パー とした時のplayer - cpuの値を計算し勝ち負けを判定する）
 	public static String rockPaperScissors(int player,int cpu) {
 		String result;
-		int winOrLoss = player - cpu;
-		switch(winOrLoss) {
+		int calc = player - cpu;
+		switch(calc) {
 		case -1:
 		case 2:
 			return result = "あなたの勝ちです！";
