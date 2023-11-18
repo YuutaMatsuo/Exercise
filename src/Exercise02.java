@@ -14,8 +14,51 @@ public class Exercise02 {
 //		ものとする。
 //		・キーボードから受け付ける演算子は+、-、*、/のいずれかが必ず入力されるものとする。
 
-		
-		
+		String isContinue;
+		int result;
+		int num1;
+		int num2;
+		String operator;
+
+		do {
+			// コンソールから入力を受け取る
+			System.out.print("1つ目の数：");
+			num1 = new java.util.Scanner(System.in).nextInt();
+			System.out.print("演算子（+、-、*、/）：");
+			operator = new java.util.Scanner(System.in).nextLine();
+			System.out.print("2つ目の数：");
+			num2 = new java.util.Scanner(System.in).nextInt();
+			// 計算処理
+			result = calculation(operator, num1, num2);
+			// 結果を出力
+			System.out.println("答えは" + result + "です");
+
+			System.out.print("計算を続けますか（y、n）：");
+			isContinue = new java.util.Scanner(System.in).nextLine();
+			//改行を行う
+
+		} while (isContinue.equals("y"));
+		System.out.println("\nプログラムを終了します。");
+
+	}
+
+	public static int calculation(String operator, int num1, int num2) {
+		int result;
+		switch (operator) {
+		case "+":
+			result = num1 + num2;
+			return result;
+		case "-":
+			result = num1 - num2;
+			return result;
+		case "*":
+			result = num1 * num2;
+			return result;
+		case "/":
+			result = num1 / num2;
+			return result;
+		}
+		return result = 99999;
 	}
 
 }
