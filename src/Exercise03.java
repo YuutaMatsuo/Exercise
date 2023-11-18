@@ -14,7 +14,18 @@ public class Exercise03 {
 //		【前提条件】
 //		・キーボードから受け付ける値は必ず整数が入力されるものとする。
 		
+		//変数を宣言
+		int count;
+		System.out.println("人数を入力：");
+		count = new java.util.Scanner(System.in).nextInt();
+		if(count < 2) {
+			System.out.println("人数は２以上の整数を入力してください");
+			System.exit(0);
+		}
 		
+		System.out.println("金額を入力：");
+		
+		System.out.println("人当たりの金額は" + "円です。幹事は" + "円です。");
 	}
 
 }
