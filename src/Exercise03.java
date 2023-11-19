@@ -13,20 +13,29 @@ public class Exercise03 {
 //
 //		【前提条件】
 //		・キーボードから受け付ける値は必ず整数が入力されるものとする。
-		
-		//変数を宣言
+
+		// 変数を宣言
 		int count;
+		int amount;
+		int answer;
+		int leader = 0;
 		System.out.println("人数を入力：");
 		count = new java.util.Scanner(System.in).nextInt();
-		//入力された値が２以上か確認
-		if(count < 2) {
+		// 入力された値が２以上か確認
+		if (count < 2) {
 			System.out.println("人数は２以上の整数を入力してください");
 			System.exit(0);
 		}
-		
+
 		System.out.println("金額を入力：");
-		
-		System.out.println("人当たりの金額は" + "円です。幹事は" + "円です。");
+		amount = new java.util.Scanner(System.in).nextInt();
+		answer = amount % count;
+		if (answer != 0) {
+			leader += 1;
+		}
+		answer = amount / count;
+		leader += answer;
+		System.out.println("人当たりの金額は" + answer + "円です。幹事は" + leader + "円です。");
 	}
 
 }
